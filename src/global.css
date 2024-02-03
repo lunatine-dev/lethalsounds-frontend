@@ -92,7 +92,6 @@ audio,
 video {
     margin: 0;
     padding: 0;
-    border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
@@ -133,9 +132,40 @@ table {
     border-spacing: 0;
 }
 
+/* tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* styles */
 html,
 body {
     height: 100%;
     width: 100%;
+}
+
+.font__lethal,
+.font__lethal * {
+    font-family: "3270-Regular" !important;
+}
+.font__regular,
+.font__regular * {
+    font-family: "Montserrat", sans-serif !important;
+}
+*,
+:after,
+:before {
+    border: 0 solid #e0e0e0;
+}
+::-webkit-scrollbar {
+    width: 10px;
+} /* Track */
+::-webkit-scrollbar-track {
+    background: #310001;
+} /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #560100;
+} /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #560100;
 }

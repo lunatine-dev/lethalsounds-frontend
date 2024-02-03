@@ -1,3 +1,4 @@
+import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import adapter from "@sveltejs/adapter-auto";
 import { readFileSync } from "fs";
 import { fileURLToPath } from "url";
@@ -17,6 +18,7 @@ const config = {
             name: pkg.version,
         },
     },
+    preprocess: vitePreprocess(),
 };
 
 export default config;
