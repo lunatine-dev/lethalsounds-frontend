@@ -1,4 +1,4 @@
-import { writable } from "svelte/store";
+import createLocalStore from "./LocalStore";
 
-export const font = writable(true);
-export const sounds = writable(false);
+export const font = createLocalStore("font");
+export const sounds = createLocalStore("sounds");
