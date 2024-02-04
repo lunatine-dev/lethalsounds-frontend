@@ -46,7 +46,7 @@
         <div
             role="dialog"
             aria-modal="true"
-            class="bg-temptress-800 p-1 border-4 border-temptress-600 relative w-full h-2/4 md:w-1/2"
+            class="bg-temptress-800 p-1 border-4 border-temptress-600 relative w-full h-3/4 md:h-2/4 md:w-3/4 xl:w-2/4"
             {id}
         >
             <a href="#" on:click|preventDefault={closeModal}>
