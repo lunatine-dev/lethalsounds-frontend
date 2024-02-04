@@ -4,7 +4,7 @@
     // icons
     import Settings from "~icons/carbon/settings";
     import LogoDiscord from "~icons/carbon/logo-discord";
-    import CurrencyDollar from "~icons/carbon/currency-dollar";
+    import Heart from "~icons/carbon/favorite-filled";
     import LogoThunderstore from "~icons/simple-icons/thunderstore";
     // stores
     import { settings } from "$lib/client/stores/modals";
@@ -23,7 +23,7 @@
         <IconAction
             href="https://ko-fi.com/astatine"
             target="_blank"
-            Icon={CurrencyDollar}
+            Icon={Heart}
             title="Support me"
         />
         <IconAction

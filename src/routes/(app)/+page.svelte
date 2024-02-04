@@ -9,7 +9,7 @@
     import logo from "$lib/assets/logo.webp";
 
     // stores
-    import { legal } from "$lib/client/stores/modals";
+    import { legal, user } from "$lib/client/stores/modals";
 
     //data
     export let data;
@@ -25,20 +25,29 @@
     <div slot="content" class="h-full">
         <div class="flex flex-col container gap-1 md:justify-center h-full">
             <Button href="/soundpacks">Browse Soundpacks</Button>
-            {#if data?.user}
-                <Button>Create Soundpack</Button>
-            {:else}
-                <Divider />
-                <Button tooltip="To create soundpacks, you must be logged in"
-                    >Login with Discord</Button
-                >
-            {/if}
             <Divider />
             <Button
                 onClick={() => {
                     legal.set(true);
                 }}>Legal</Button
             >
+            {#if data?.user}
+                <Divider />
+                <Button
+                    onClick={() => {
+                        user.set(true);
+                    }}>zoey</Button
+                >
+                <div class="ml-5">
+                    <Button>Your Soundpacks</Button>
+                    <Button>Create Soundpack</Button>
+                </div>
+            {:else}
+                <Divider />
+                <Button tooltip="To create soundpacks, you must be logged in"
+                    >Login with Discord</Button
+                >
+            {/if}
         </div>
     </div>
     <Footer slot="footer" />
