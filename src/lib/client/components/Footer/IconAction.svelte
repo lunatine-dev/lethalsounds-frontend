@@ -18,7 +18,7 @@
         {href}
         {title}
         {target}
-        on:click|preventDefault={() => {
+        on:click={() => {
             if ($sounds) {
                 ButtonOpen.play();
             }

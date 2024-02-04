@@ -27,16 +27,11 @@
             title="Support me"
         />
         <IconAction
-            href="https://ko-fi.com/astatine"
+            href="https://discord.gg/rn78pUTMxv"
             target="_blank"
             Icon={LogoDiscord}
             title="Discord Server"
         />
-        <IconAction
-            href="https://ko-fi.com/astatine"
-            target="_blank"
-            Icon={LogoThunderstore}
-            title="Mod Download"
-        />
+        <IconAction href="#" Icon={LogoThunderstore} title="Mod Download" />
     </div>
 </div>

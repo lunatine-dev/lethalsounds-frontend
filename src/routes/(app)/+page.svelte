@@ -1,5 +1,4 @@
 <script>
-    import { version, browser } from "$app/environment";
     // Components
     import Page from "$lib/client/components/Layout/Page.svelte";
     import Footer from "$lib/client/components/Footer/Footer.svelte";
@@ -8,6 +7,9 @@
     import Divider from "$lib/client/components/Menu/Divider.svelte";
     // static files
     import logo from "$lib/assets/logo.webp";
+
+    // stores
+    import { legal } from "$lib/client/stores/modals";
 
     //data
     export let data;
@@ -22,12 +24,8 @@
     />
     <div slot="content" class="h-full">
         <div class="flex flex-col container gap-1 md:justify-center h-full">
-            <Button active={true}>Home</Button>
-            <Button>Legal</Button>
-            <Divider />
-            <Button>Browse Soundpacks</Button>
+            <Button href="/soundpacks">Browse Soundpacks</Button>
             {#if data?.user}
-                <Button>Your Soundpacks</Button>
                 <Button>Create Soundpack</Button>
             {:else}
                 <Divider />
@@ -35,6 +33,12 @@
                     >Login with Discord</Button
                 >
             {/if}
+            <Divider />
+            <Button
+                onClick={() => {
+                    legal.set(true);
+                }}>Legal</Button
+            >
         </div>
     </div>
     <Footer slot="footer" />

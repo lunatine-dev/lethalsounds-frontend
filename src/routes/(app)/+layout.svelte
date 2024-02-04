@@ -1,6 +1,6 @@
 <script>
     import { font, sounds } from "$lib/client/stores/preferences";
-    import { settings } from "$lib/client/stores/modals";
+    import { settings, legal } from "$lib/client/stores/modals";
     import Switch from "$lib/client/components/Form/Switch.svelte";
     import { version } from "$app/environment";
 
@@ -34,5 +34,11 @@
                 font.set(fontsChecked);
             }}>Custom Font</Switch
         >
+    </div>
+</Modal>
+
+<Modal active={legal} title="Legal">
+    <div class="p-5">
+        <p>todo: legal stuffs</p>
     </div>
 </Modal>
