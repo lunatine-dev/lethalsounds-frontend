@@ -6,7 +6,7 @@
 </script>
 
 <div
-    class="h-full w-full bg-black text-white {$font
+    class="h-full w-full bg-black text-white {!$font
         ? 'font__lethal'
         : 'font__regular'}"
 >
