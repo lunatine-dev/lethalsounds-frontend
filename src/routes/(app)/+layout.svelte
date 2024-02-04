@@ -2,12 +2,15 @@
     import { font, sounds } from "$lib/client/stores/preferences";
     import { settings } from "$lib/client/stores/modals";
     import Switch from "$lib/client/components/Form/Switch.svelte";
+    import { version } from "$app/environment";
 
     import Modal from "$lib/client/components/Modal/Modal.svelte";
 
     let soundsChecked = $sounds;
     let fontsChecked = $font;
 </script>
+
+<div class="absolute"><span>v{version || "0.0.0"}</span></div>
 
 <div
     class="h-full w-full bg-black text-white {$font
