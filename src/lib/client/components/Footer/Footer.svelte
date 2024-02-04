@@ -14,8 +14,7 @@
     <span>&copy; astatine.moe</span>
     <div class="flex divide-x divide-solid divide-gray-600">
         <IconAction
-            on:click={(e) => {
-                e.preventDefault();
+            onClick={(e) => {
                 settings.set(true);
             }}
             Icon={Settings}

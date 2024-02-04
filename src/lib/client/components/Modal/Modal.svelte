@@ -2,6 +2,9 @@
     // stores
     import { sounds, font } from "$lib/client/stores/preferences";
 
+    // sounds
+    import { ButtonClose } from "$lib/client/util/sounds";
+
     // icons
     import CloseLarge from "~icons/carbon/close-large";
 
@@ -24,6 +27,7 @@
     export function closeModal() {
         if ($sounds) {
             // play sound
+            ButtonClose.play();
         }
         active.set(false);
         window.removeEventListener("keydown", handleKeyDown);
