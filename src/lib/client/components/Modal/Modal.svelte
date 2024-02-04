@@ -38,7 +38,7 @@
 <div
     class="absolute bg-black/90 w-full h-full z-[101] top-0 {$active
         ? 'block'
-        : 'hidden'} {!$font ? 'font__lethal' : 'font_regular'}"
+        : 'hidden'} {$font ? 'font__lethal' : 'font_regular'}"
     on:click={handleClickOutside}
     on:keydown={handleKeyDown}
 >
